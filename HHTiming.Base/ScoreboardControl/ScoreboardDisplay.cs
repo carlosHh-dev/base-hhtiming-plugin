@@ -18,6 +18,7 @@ using HHTiming.Desktop.Definitions.PlugInFramework;
 using HHTiming.Core.Definitions.UIUpdate.Implementations.Messages;
 using HHTiming.Core.Definitions.UIUpdate.Implementations;
 using HHTiming.Core.Definitions.Enums;
+using HHTiming.Base.Properties;
 
 namespace HHTiming.Base.Scoreboard
 {
@@ -179,7 +180,19 @@ namespace HHTiming.Base.Scoreboard
 
         public HHRibbonBar[] GetRibbonBars()
         {
-            return null;
+            var bar = new HHRibbonBar ("Export");
+
+            var button1 = new HHRibbonButton("Export to Csv", Resources.Graph_48, ExportData);
+
+            bar.Buttons.Add(button1);
+
+            return new HHRibbonBar[] { bar };
+        }
+
+        private void ExportData (object sender)
+        {
+            // put in here the export function
+
         }
 
         public void LoadFromXML(XmlElement parentXMLElement)
