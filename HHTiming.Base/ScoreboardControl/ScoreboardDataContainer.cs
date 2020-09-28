@@ -44,7 +44,7 @@ namespace HHTiming.Base.Scoreboard
         public int CarPassed { get; set; }
 
         [DisplayName("Sector Exit Time")]
-        public TimeDataType LastSectorExitTime { get; set; } = new TimeDataType(nameof(LastSectorExitTime), false, true, false, false, "0.0", TimeDataType.RefDisplayMode.Value, false, true, false, 1, false);
+        public TimeDataType LastSectorExitTime { get; set; } = new TimeDataType(nameof(LastSectorExitTime), false, true, false, false, "0.0", RefDisplayMode.Value, false, true, false, 1, false);
 
         [Browsable(false)]
         public string ItemID
